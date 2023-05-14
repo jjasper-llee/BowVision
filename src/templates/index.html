@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bow Detector</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body class="dark-mode">
+    
+    <label for="darkModeToggle">
+      <button id="darkModeToggle" class="toggle-button">
+        <span>Dark Mode</span>
+        <div class="toggle-button__bar"></div>
+      </button>
+    </label>
+    <h1>Bow Detector</h1>
+    <video id="webcam" autoplay style="display: none"></video>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <button id="startStopBtn">Start Webcam</button>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
